@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Redirect } from 'react-router-dom'
 import { AuthContext } from './Auth'
-import firebaseConfig from '../config'
+import { auth } from '../firebase/config'
 
 const LogIn = () => {
 
@@ -12,7 +12,7 @@ const LogIn = () => {
 
         try {
 
-            firebaseConfig.auth().signInWithEmailAndPassword(email.value, password.value);
+            auth.signInWithEmailAndPassword(email.value, password.value);
 
         } catch(error) {
             alert(error);
@@ -29,14 +29,14 @@ const LogIn = () => {
             <><br /><br />
             <br /><br /><br /><br />
             <div className="container mt-5" align="center">
-            <h1>Log-in</h1><br />
+            <h3>Log-in</h3><br />
             <form onSubmit={handleSubmit}>
             <div className="mb-3">
-                <label for="exampleInputEmail1" className="form-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email : </label>&nbsp;&nbsp;&nbsp;
+                <label for="exampleInputEmail1" className="form-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>&nbsp;&nbsp;&nbsp;
                 <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
             </div><br />
             <div className="mb-3">
-                <label for="exampleInputPassword1" className="form-label">Password : </label>&nbsp;&nbsp;&nbsp;
+                <label for="exampleInputPassword1" className="form-label"></label>&nbsp;&nbsp;&nbsp;
                 <input type="password" name="password" className="form-control" id="exampleInputPassword1" />
             </div><br />
             <button type="submit" className="btn btn-primary">Log-in</button>

@@ -8,7 +8,7 @@ function HeroSection() {
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
       <h1>Pai Mai Pai</h1>
-      <p>Travel and tourist attraction!</p>
+      <p>Pictures of attractions or views !</p>
       <div className='hero-btns'>
         <Button
           className='btns'

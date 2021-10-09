@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Travel from './components/pages/Travel';
+import Upload from './components/pages/Upload';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import LogIn from './components/pages/LogIn';
@@ -20,7 +20,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/Travel' component={Travel} />
+          <Route path='/Upload' component={Upload} />
           <Route path='/products' component={Products} />
           <Route path='/Home' component={HomeLogin} />
           <Route exact path="/login" component={LogIn} />

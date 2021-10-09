@@ -11,7 +11,7 @@ const HomeLogin = () => {
             <br /> <br /> <br />
                 <h1>Welcome</h1>
                 {currentUser ? (
-                    <p>You are logged in - <Link to="/dashboard">View Dashboard</Link></p>
+                    <p align="center">You are logged in - <Link to="/dashboard">View Dashboard</Link></p>
                 ) : (
                     
                     <div className="container mt-5" align="center">

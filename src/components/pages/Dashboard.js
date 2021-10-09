@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Redirect } from 'react-router-dom'
 import { AuthContext } from './Auth'
-import firebaseConfig from '../config'
+import { auth } from '../firebase/config'
 
 const DashBoard = () => {
     const { currentUser } = useContext(AuthContext);
@@ -12,10 +12,10 @@ const DashBoard = () => {
 
     return (
         <div>
-            <div className="container mt-5">
+            <div className="container mt-5" align="center">
                 <h1>Welcome</h1>
-                <p>This is the dashboard, if you can see this you're logged in.</p>
-                <button onClick={() => firebaseConfig.auth().signOut()} class="btn btn-danger">Sign Out</button>
+                <p>This is the dashboard, if you can see this you're logged in.</p><br />
+                <button onClick={() => auth.signOut()} class="btn btn-danger" >Sign Out</button>
             </div>
         </div>
     )
