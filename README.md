@@ -10,4 +10,4 @@ $ npm install
 - firebase
 
 # run 
-- npm start
+$ npm start
