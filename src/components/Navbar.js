@@ -43,6 +43,15 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
+                to='/Show'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Images
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
                 to='/Upload'
                 className='nav-links'
                 onClick={closeMobileMenu}
@@ -50,8 +59,6 @@ function Navbar() {
                 Upload
               </Link>
             </li>
-            
-
             <li>
               <Link 
                 to='/Home'

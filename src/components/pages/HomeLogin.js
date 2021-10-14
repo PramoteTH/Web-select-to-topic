@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AuthContext } from './Auth'
+import Footer from '../Footer';
 
 const HomeLogin = () => {
     const { currentUser } = useContext(AuthContext);
@@ -11,7 +12,7 @@ const HomeLogin = () => {
             <br /> <br /> <br />
                 <h1>Welcome</h1>
                 {currentUser ? (
-                    <p align="center">You are logged in - <Link to="/dashboard">View Dashboard</Link></p>
+                    <p align="center"><h5 class="w3-center w3-padding-64"><span className="w3-tag w3-wide">WELCOME TO PAIMAIPAI(PMP) WEBSITE</span></h5>It's a website to share photo stories with people who don't have access to that area. But there are certain people who have access to that place. <br />To be a medium for exchanging experiences of the beauty of various places from all over the world <br /><br /><Link to="/dashboard">View Dashboard</Link><br /><br /><br /><br /></p>
                 ) : (
                     
                     <div className="container mt-5" align="center">
@@ -26,9 +27,10 @@ const HomeLogin = () => {
                     <p>
                         <Link to="/login" className="btn  btn-primary">Log In</Link> or <Link to="/signup" className="btn btn-success">Sign Up</Link>
                     </p>
-                    </div> 
+                    </div>
                 )}
-            </div>
+            </div><br /><br />
+            <Footer/>
         </>
     )
 }

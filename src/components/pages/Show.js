@@ -1,27 +1,21 @@
 import React, { useState } from 'react';
 import '../../App.css';
-import { Redirect } from 'react-router-dom'
-import { AuthContext } from './Auth'
-import { useContext } from 'react'
-import Title from '../Title';
-import UploadForm from '../UploadForm';
 import ImageGrid from '../ImageGrid';
 import Modal from '../Modal';
 import Footer from '../Footer';
 
-function Upload() {
-  const { currentUser } = useContext(AuthContext);
+function Show() {
   const [selectedImg, setSelectedImg] = useState(null);
   
 
-    if (!currentUser) {
-        return <Redirect to="/login" />;
-    }
     return (
-      <>
+        <>
       <div className="App">
-        <Title/>
-        <UploadForm /><br />
+        <div className="title">
+            <br />
+            <h2>Pictures</h2>
+            <p>Pictures of views or attractions shared by your friends or yours.</p>
+        </div><br />
         <ImageGrid setSelectedImg={setSelectedImg} />
         { selectedImg && (
           <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
@@ -31,4 +25,4 @@ function Upload() {
       </>
     );
   }
-export default Upload;
+export default Show;
